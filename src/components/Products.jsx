@@ -10,23 +10,23 @@ export default function Products({ openModal }) {
     <section id="products" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4">
 
-        <h2 className="text-3xl font-semibold text-center mb-4 text-gray-900">
+        <h2 className="text-3xl font-semibold text-center mb-6">
           Our Products
         </h2>
 
         <div className="grid md:grid-cols-4 gap-6">
-          {products.map((item, index) => (
+          {products.map((item, i) => (
             <div
-              key={index}
+              key={i}
               onClick={() => openModal(item.name)}
-              className="cursor-pointer rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300"
+              className="cursor-pointer rounded-2xl overflow-hidden border hover:shadow-xl transition"
             >
               <div
-                className="h-48 bg-cover bg-center"
+                className="h-48 bg-cover bg-center hover:scale-110 transition"
                 style={{ backgroundImage: `url(${item.image})` }}
               ></div>
 
-              <div className="p-4 text-center font-medium text-gray-800">
+              <div className="p-4 text-center font-medium">
                 {item.name}
               </div>
             </div>
