@@ -5,6 +5,7 @@ import Products from "./components/Products";
 import Gallery from "./components/Gallery";
 import GoogleReviews from "./components/GoogleReviews";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   const [showLocationModal, setShowLocationModal] = useState(false);
@@ -25,6 +26,7 @@ function App() {
       <Gallery />
       <GoogleReviews />
       <Contact />
+      <Footer />
 
       {/* Floating WhatsApp */}
       <button
