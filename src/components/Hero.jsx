@@ -1,19 +1,37 @@
+import { useEffect, useState } from "react";
+
 export default function Hero({ openModal }) {
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setOffset(window.scrollY * 0.3);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
-
+      {/* Parallax */}
       <div
-        className="absolute inset-0 bg-cover bg-center animate-zoom"
+        className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c')",
+          transform: `translateY(${offset}px)`,
         }}
       ></div>
 
+      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
 
-      <div className="relative text-center text-white px-6 max-w-4xl">
-
+      {/* Content */}
+      <div
+        className="relative text-center text-white px-6 max-w-4xl"
+        data-aos="fade-up"
+      >
         <h1 className="text-4xl md:text-6xl font-semibold mb-6">
           Premium Glass Solutions <br /> For Modern Spaces
         </h1>
@@ -25,14 +43,15 @@ export default function Hero({ openModal }) {
         <p className="mb-8 text-white/80">
           Toughened, laminated & decorative glass
         </p>
-
+        <p className="text-sm text-white/70 mb-6">
+          Trusted by customers across Raipur & Bilaspur
+        </p>
         <button
           onClick={openModal}
           className="bg-white text-gray-900 px-8 py-3 rounded-full shadow-lg"
         >
           Get Quote
         </button>
-
       </div>
     </section>
   );
