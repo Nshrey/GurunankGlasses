@@ -61,7 +61,7 @@ function App() {
                     `https://wa.me/919098455957?text=${encodeURIComponent(message)}`,
                   );
                 }}
-                className="w-full bg-blue-600 text-white py-3 rounded-xl"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition duration-300"
               >
                 📍 Raipur
               </button>
@@ -76,7 +76,7 @@ function App() {
                     `https://wa.me/919203656660?text=${encodeURIComponent(message)}`,
                   );
                 }}
-                className="w-full bg-blue-600 text-white py-3 rounded-xl"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition duration-300"
               >
                 📍 Bilaspur
               </button>

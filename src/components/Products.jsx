@@ -47,7 +47,7 @@ export default function Products({ openModal }) {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   return (
-    <section id="products" className="py-24 bg-white">
+    <section id="products" className="py-24 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-semibold text-center mb-4">
@@ -64,7 +64,7 @@ export default function Products({ openModal }) {
             <div
               key={index}
               onClick={() => setSelectedCategory(cat)}
-              className="cursor-pointer rounded-xl overflow-hidden shadow-md hover:shadow-xl transition group"
+              className="cursor-pointer rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group hover:border hover:border-blue-400"
             >
               <div className="h-52 relative">
                 <img
@@ -74,11 +74,11 @@ export default function Products({ openModal }) {
                 />
 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition"></div>
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 backdrop-blur-[1px] transition"></div>
 
                 {/* Text */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <p className="text-white text-lg font-semibold text-center px-2">
+                  <p className="text-white text-xl font-semibold tracking-wide text-center px-2">
                     {cat.name}
                   </p>
                 </div>

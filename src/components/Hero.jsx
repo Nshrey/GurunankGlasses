@@ -48,7 +48,7 @@ export default function Hero({ openModal }) {
         </p>
         <button
           onClick={openModal}
-          className="bg-white text-gray-900 px-8 py-3 rounded-full shadow-lg"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition duration-300"
         >
           Get Quote
         </button>

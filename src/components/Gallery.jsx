@@ -16,7 +16,7 @@ export default function Gallery() {
   }, []);
 
   return (
-    <section id="gallery" className="py-24 bg-gray-100">
+    <section id="gallery" className="py-24 md:py-28 bg-gray-100">
       <div className="max-w-6xl mx-auto px-4">
         {/* Heading */}
         <h2

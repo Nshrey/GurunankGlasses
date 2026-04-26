@@ -219,3 +219,16 @@ html {
 .whatsapp-pulse {
   animation: pulse 2s infinite;
 }
+h1,
+h2,
+h3 {
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.6;
+}
